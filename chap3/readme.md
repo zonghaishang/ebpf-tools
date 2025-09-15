@@ -2,6 +2,11 @@
 ```
 sudo bpftool prog load hello.bpf.o /sys/fs/bpf/hello
 
+sudo bpftool  prog  show name hello --pretty
+
+sudo bpftool map list
+sudo bpftool map dump name hello.bss
+
 sudo bpftool net attach xdp name hello dev lo
 
 
