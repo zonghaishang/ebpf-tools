@@ -1,0 +1,1 @@
+sudo strace -e bpf,perf_event_open,ioctl,ppoll ./hello-buffer-config.py

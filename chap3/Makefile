@@ -1,4 +1,4 @@
-TARGET = hello
+TARGET = hello hello-func
 
 .PYONY: all
 
