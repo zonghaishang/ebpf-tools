@@ -1,13 +1,15 @@
 
 ```
-sudo bpftool prog load hello.bpf.o /sys/fs/bpf/hello
+sudo bpftool prog load hello.bpf.o /sys/fs/bpf/hello2
 
-sudo bpftool  prog  show name hello --pretty
+sudo bpftool  prog  show name hello2 --pretty
 
 sudo bpftool map list
 sudo bpftool map dump name hello.bss
 
-sudo bpftool net attach xdp name hello dev lo
+sudo bpftool net attach xdp name hello2 dev lo
+
+sudo cat /sys/kernel/debug/tracing/trace_pipe
 
 
 sudo bpftool net detach xdp  dev lo
